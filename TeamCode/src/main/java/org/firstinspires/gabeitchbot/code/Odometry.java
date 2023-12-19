@@ -184,5 +184,4 @@ public class Odometry extends Subsystem {
         }
         return angle;
     }
-
 }
