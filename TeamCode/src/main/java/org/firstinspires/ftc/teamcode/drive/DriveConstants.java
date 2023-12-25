@@ -88,10 +88,11 @@ public class DriveConstants {
      * You are free to raise this on your own if you would like. It is best determined through experimentation.
 
      */
-    public static double MAX_VEL = 52.48291908330528;
+    public static double MAX_VEL = 44.44618656655544;
     public static double MAX_ACCEL = 52.48291908330528;
     public static double MAX_ANG_VEL = Math.toRadians(215.713756097561);
     public static double MAX_ANG_ACCEL = Math.toRadians(215.713756097561);
+    // Voltage Compensated kF: 13.158962515720882
 
 
     public static double encoderTicksToInches(double ticks) {
