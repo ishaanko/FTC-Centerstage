@@ -7,6 +7,7 @@ import com.acmerobotics.roadrunner.geometry.Pose2d;
 import com.acmerobotics.roadrunner.localization.ThreeTrackingWheelLocalizer;
 import com.qualcomm.robotcore.hardware.DcMotorEx;
 import com.qualcomm.robotcore.hardware.HardwareMap;
+
 import org.firstinspires.ftc.teamcode.util.Encoder;
 
 import java.util.Arrays;
@@ -33,13 +34,13 @@ public class StandardTrackingWheelLocalizer extends ThreeTrackingWheelLocalizer 
 
     public static double LATERAL_DISTANCE = 10.7087; // in; distance between the left and right wheels
     public static double FORWARD_OFFSET = 5.35433; // in; offset of the lateral wheel
-
-    private Encoder leftEncoder, rightEncoder, frontEncoder;
-
     public static double X_MULTIPLIER = 0.987654321;
     public static double Y_MULTIPLIER = 1.002506265664;
-
-    private List<Integer> lastEncPositions, lastEncVels;
+    private final Encoder leftEncoder;
+    private final Encoder rightEncoder;
+    private final Encoder frontEncoder;
+    private final List<Integer> lastEncPositions;
+    private final List<Integer> lastEncVels;
 
     public StandardTrackingWheelLocalizer(HardwareMap hardwareMap, List<Integer> lastTrackingEncPositions, List<Integer> lastTrackingEncVels) {
         super(Arrays.asList(
