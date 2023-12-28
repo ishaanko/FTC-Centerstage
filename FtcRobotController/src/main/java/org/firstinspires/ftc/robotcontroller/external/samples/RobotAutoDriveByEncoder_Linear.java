@@ -78,10 +78,10 @@ public class RobotAutoDriveByEncoder_Linear extends LinearOpMode {
             (WHEEL_DIAMETER_INCHES * 3.1415);
     static final double DRIVE_SPEED = 0.6;
     static final double TURN_SPEED = 0.5;
+    private final ElapsedTime runtime = new ElapsedTime();
     /* Declare OpMode members. */
     private DcMotor leftDrive = null;
     private DcMotor rightDrive = null;
-    private final ElapsedTime runtime = new ElapsedTime();
 
     @Override
     public void runOpMode() {

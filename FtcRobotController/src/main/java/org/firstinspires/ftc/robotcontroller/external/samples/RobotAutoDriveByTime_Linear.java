@@ -60,10 +60,10 @@ public class RobotAutoDriveByTime_Linear extends LinearOpMode {
 
     static final double FORWARD_SPEED = 0.6;
     static final double TURN_SPEED = 0.5;
+    private final ElapsedTime runtime = new ElapsedTime();
     /* Declare OpMode members. */
     private DcMotor leftDrive = null;
     private DcMotor rightDrive = null;
-    private final ElapsedTime runtime = new ElapsedTime();
 
     @Override
     public void runOpMode() {
