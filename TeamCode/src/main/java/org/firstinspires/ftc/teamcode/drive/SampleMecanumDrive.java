@@ -72,12 +72,10 @@ public class SampleMecanumDrive extends MecanumDrive {
     private final DcMotorEx rightRear;
     private final DcMotorEx rightFront;
     private final List<DcMotorEx> motors;
-
-    private IMU imu;
     private final VoltageSensor batteryVoltageSensor;
-
     private final List<Integer> lastEncPositions = new ArrayList<>();
     private final List<Integer> lastEncVels = new ArrayList<>();
+    private IMU imu;
 
     public SampleMecanumDrive(HardwareMap hardwareMap) {
         super(kV, kA, kStatic, TRACK_WIDTH, TRACK_WIDTH, LATERAL_MULTIPLIER);
